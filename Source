@@ -10,11 +10,16 @@ Section:NewButton("Linorix Hub", "Go to pastebin.com/raw/1Fy3ujdF for CMD", func
     loadstring(game:HttpGet(('https://pastebin.com/raw/KumP53dH'),true))()
 end)
 local Tab = Window:NewTab("Player")
-local Section = Tab:NewSection("Section Name")
+local Section = Tab:NewSection("Player Section")
 Section:NewSlider("WalkSpeed", "Changes your WalkSpeed", 500, 15, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 Section:NewSlider("JumpPower", "Increases your JumpPower", 500, 50, function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("Keybinds")
+Section:NewKeybind("Set Keybinds Toggle On/Off", "Toggle On/Off", Enum.KeyCode.F, function()
+	Library:ToggleUI()
 end)
 end
