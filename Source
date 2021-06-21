@@ -1,8 +1,6 @@
 if game.PlaceId == 417267366 then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Dollhouse Roleplay Script Hub", "Sentinel")
-
---Main
 local Tab = Window:NewTab("FE Scripts")
 local Section = Tab:NewSection("Scripts")
 Section:NewButton("UTG Hub [FE]", "Executes an FE Hub", function()
@@ -11,9 +9,8 @@ end)
 Section:NewButton("Linorix Hub", "Go to pastebin.com/raw/1Fy3ujdF for CMD", function()
     loadstring(game:HttpGet(('https://pastebin.com/raw/KumP53dH'),true))()
 end)
-
---Player
 local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Section Name")
 Section:NewSlider("WalkSpeed", "Changes your WalkSpeed", 500, 15, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
